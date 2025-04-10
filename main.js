@@ -1,7 +1,6 @@
 $(document).ready(function() {
   var divx = document.getElementById('terminal');
   /* Welcome screen */
-  $('#welcome-login').animate({'opacity': '1', 'top': $(window).height()/2 - $('#welcome-login').height()/2 }, 3000);
 
   setTimeout(function() {
       $('#login-input').animate({'opacity': '1'}, 3000);
