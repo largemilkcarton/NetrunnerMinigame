@@ -2,6 +2,12 @@
   color: red;
   cursor: default;
   font: 700 1em 'BenchNine', sans-serif;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 html,
@@ -10,19 +16,6 @@ body {
   color: red;
   margin: 0;
 }
-.container {
-  position: relative;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
 
 #welcome-login {
   border: solid 0px;
