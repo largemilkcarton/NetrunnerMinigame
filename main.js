@@ -22,6 +22,7 @@ $(document).ready(function() {
       var connect = 0;
       var trojan = 0;
       var disconnect = 0;
+      var gay = 0;
 
       var won = 0;
       var able = 0;
@@ -168,7 +169,7 @@ $(document).ready(function() {
 
             switch( $(this).val() ) {
               case 'terminal state 1':
-                $('#terminal').append('<div>$&nbsp;&nbsp;&nbsp;' + $(this).val() + '<br>List of commands:<br>terminal state 1 - Enables commands<br>connect [THING] - Connects host system with the targeted system<br>disconnect - Disconnects host system from the connected system<br>exit - Close system<br>list - Shows the list of the currently available Daemons/Applications<br>send [Daemon/Application] - Sends given Daemon/Application to the connected system<span id="blinking">_</span></div>');
+                $('#terminal').append('<div>$&nbsp;&nbsp;&nbsp;' + $(this).val() + '<br>List of commands:<br>terminal state 1 - Enables commands<br>connect [THING] - Connects host system with the targeted system<br>disconnect - Disconnects host system from the connected system<br>exit - Close system<br>list - Shows the list of the currently available Daemons/Applications<br>Gay - Makes you gay<br>send [Daemon/Application] - Sends given Daemon/Application to the connected system<span id="blinking">_</span></div>');
                 help = 1;
                 break;
               case 'connect THING HERE':
@@ -222,6 +223,14 @@ $(document).ready(function() {
                 disconnect = 0;
                 won = 0;
                 $('#objectives li').css({'color': 'green'});
+                break;
+                case 'gay':
+                if (gay === 0) {
+                  $('#terminal').append('<div>$&nbsp;&nbsp;&nbsp;' + $(this).val() + '<br>Making you gay...<br>You are gay now<span id="blinking">_</span></div>');
+                  gay = 1;
+                } else {
+                  $('#terminal').append('<div>$&nbsp;&nbsp;&nbsp;' + $(this).val() + '<br>ur already gay bro, theres no going back<span id="blinking">_</span></div>');
+                }
                 break;
               default:
                 $('#terminal').append('<div>$&nbsp;&nbsp;&nbsp;' + $(this).val() + '<br>Command not recognized<span id="blinking">_</span></div>');
